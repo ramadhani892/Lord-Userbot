@@ -175,7 +175,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 # Untuk Perintah .rambot (alive)
-RAM_TEKS_KOSTUM = os.environ.get("RAM_TEKS_KOSTUM", None)
+RAM_TEKS_KOSTUM = os.environ.get("RAM_TEKS_KOSTUM") or "ㅤ"
 
 # Untuk Melihat Repo
 REPO_NAME = os.environ.get("REPO_NAME") or "⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐"
@@ -233,7 +233,7 @@ OWNER_BOT = os.environ.get(
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
-DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
+DEFAULT_BIO = os.environ.get("DEFAULT_BIO") or "⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐"
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
@@ -399,7 +399,7 @@ ISAFK = False
 AFKREASON = None
 ZALG_LIST = {}
 
-#Import Userbot - Ported by KENZO
+#Import Userbot - Ported by RAMADHANI892
 from userbot import (
     ALIVE_NAME
 )
@@ -432,7 +432,7 @@ def paginate_help(page_number, loaded_modules, prefix):
                     "< ̤< ̤", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    f"{EMOJI_HELP}𝗖𝗟𝗢𝗦𝗘{EMOJI_HELP}", data="{}_close({})".format(prefix, modulo_page)
+                    f"{EMOJI_HELP} 𝗖𝗟𝗢𝗦𝗘 {EMOJI_HELP}", data="{}_close({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
                     "> ̤> ̤", data="{}_next({})".format(prefix, modulo_page)
@@ -491,9 +491,9 @@ with bot:
                     f"WOI NGENTOT [{get_display_name(u)}](tg://user?id={u.id}) NGAPAIN LU DI\n**RAM-UBOT**\nKALO MAU TAU LEBIH DETAIL MENDING LU KE\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
                     buttons=[
                         [
-                             Button.url("📢 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📢",
+                             Button.url(f"{EMOJI_HELP} 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 {EMOJI_HELP}",
                                         "t.me/Ramubotinfo"),
-                             Button.url("🚨 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 🚨",
+                             Button.url(f"{EMOJI_HELP} 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 {EMOJI_HELP}",
                                         "t.me/geezSupportGroup")],
                              [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
                                         "t.me/MaafGausahSokap")],
@@ -522,7 +522,7 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"{REPO_NAME}\n\n**𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}**\n\n💫 **𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `7.0`\n💫 **𝗠𝗢𝗗𝗨𝗟𝗘𝗦 :** `{len(plugins)}`\n\n🔥 **𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : [{DEFAULTUSER}]({OWNER_BOT}) **".format(
+                    text=f"{REPO_NAME}\n\n𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}\n\n💫 𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 :** `7.0`\n💫 𝗠𝗢𝗗𝗨𝗟𝗘𝗦 : `{len(plugins)}`\n\n🔥 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : [{DEFAULTUSER}]({OWNER_BOT}) ".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -543,7 +543,7 @@ with bot:
                                 f"{REPO_NAME}",
                                 "https://github.com/ramadhani892/RAM-UBOT"),
                             custom.Button.url(
-                                "OWNER",
+                                "LANDAK",
                                 f"{OWNER_BOT}")] 
                     ],
                     link_preview=False,
@@ -583,14 +583,14 @@ with bot:
                         [
                             Button.url(f"{REPO_NAME}",
                                        "t.me/ramubotinfo"),
-                            Button.url("•SUPPORT• ", 
+                            Button.url(f"{EMOJI_HELP} SUPPORT {EMOJI_HELP} ", 
                                        "t.me/GeezSupportGroup")],
-                        [Button.url("•OWNER• ",
+                        [Button.url(f"{EMOJI_HELP} OWNER {EMOJI_HELP} ",
                                     f"{OWNER_BOT}"),
-                            Button.url("•INSTAGRAM• ",
+                            Button.url(f"{EMOJI_HELP} INSTAGRAM {EMOJI_HELP} ",
                                    f"{IG_ALIVE}")],
                         [custom.Button.inline(
-                            "🔥𝗘𝗫𝗜𝗧🔥", b"close")],
+                            f"{EMOJI_HELP} 𝗘𝗫𝗜𝗧 {EMOJI_HELP}", b"close")],
                     ]
                 )
 
@@ -648,7 +648,7 @@ with bot:
 
         @tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
-            await event.edit("DAH ABIS ABANG NYA MAU PULANG!", buttons=Button.clear())
+            await event.edit("Menu di tutup!\nUntuk Melihat Menu, Silahkan Ketik `.rhelp`", buttons=Button.clear())
 
 
     except BaseException:
